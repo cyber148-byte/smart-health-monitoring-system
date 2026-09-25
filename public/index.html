@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Health Monitoring</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-icon">+</div>
+          <div>
+            <p class="eyebrow">Clinical Ops</p>
+            <h1>CarePulse</h1>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active">Overview</button>
+          <button class="nav-item">Patients</button>
+          <button class="nav-item">Alerts</button>
+          <button class="nav-item">Reports</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="small-label">This shift</p>
+          <strong id="shiftSummary">-</strong>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Smart health monitoring system</p>
+            <h2>Patient wellness dashboard</h2>
+          </div>
+          <button class="primary-btn">Generate report</button>
+        </header>
+
+        <section class="stats-grid" id="statsGrid"></section>
+
+        <section class="dashboard-grid">
+          <div class="panel large-panel">
+            <div class="panel-header">
+              <h3>Patient overview</h3>
+              <span class="badge neutral" id="lastUpdated">Live</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Patient</th>
+                    <th>Vitals</th>
+                    <th>Risk</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="patientTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Priority alerts</h3>
+              <span class="badge danger">Live</span>
+            </div>
+            <ul id="alertList" class="alert-list"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

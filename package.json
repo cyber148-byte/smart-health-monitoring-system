@@ -1,0 +1,38 @@
+{
+  "name": "smart-health-monitoring-system",
+  "version": "1.0.0",
+  "description": "Smart health monitoring dashboard for tracking patient vitals, risk levels, and clinical alerts.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node scripts/start-all.js",
+    "dev:frontend": "node scripts/run-frontend.js",
+    "dev:backend": "node scripts/run-backend.js",
+    "start:frontend": "node scripts/run-frontend.js",
+    "start:backend": "node scripts/run-backend.js",
+    "start:all": "node scripts/start-all.js",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "start": "node scripts/run-frontend.js"
+  },
+  "keywords": [
+    "healthcare",
+    "monitoring",
+    "dashboard",
+    "express",
+    "api"
+  ],
+  "author": "GitHub Copilot",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.1"
+  }
+}
