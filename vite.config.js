@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
+const repoName = "smart-health-monitoring-system";
 const apiTarget = process.env.VITE_API_TARGET || "http://localhost:8000";
 const apiProxy = {
   "/api": {
@@ -11,7 +12,8 @@ const apiProxy = {
   },
 };
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? `/${repoName}/` : "/",
   plugins: [react(), tailwindcss()],
   server: {
     host: "0.0.0.0",
@@ -23,4 +25,4 @@ export default defineConfig({
     port: 4173,
     proxy: apiProxy,
   },
-});
+}));
